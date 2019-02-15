@@ -6,7 +6,7 @@
 		git merge [branch-name]								合并指定分支到当前分支
 		git branch -d [branch-name]							删除指定分支，如果当前分支未合并，会提示
 		git branch -D [branch-name]							强制删除分支，无论是否已被合并
-		git branch -v										查看各个分支最优一次提交信息
+		git branch -v										查看各个分支最后一次提交信息
 		git merge [branch-name]								合并指定分支到当前分支
 		git branch --merged									查看已合并到当前的分支
 		git branch --no--merged								查看尚未合并到当前分支的分支
