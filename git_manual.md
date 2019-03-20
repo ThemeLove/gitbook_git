@@ -43,7 +43,8 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git init	[project-name]					在当前目录下project-name目录，变成可以管理的本地仓库，如果没有改目录则创建
 	   git status								查看当前工作目录的状态
 	   git add     [文件名]						添加文件到本地暂存区
-	   git checkout [文件名]						抛弃文件修改的命令，回到上次提交的状态
+	   git checkout [文件名]						抛弃文件修改的命令，回到上次提交的状态  
+	   git checkout .							本地所有没有提交的修改都回到原来的状态
 	   git add .								一次性添加所有改动到暂存区
 	   git add -A								一次性添加所有改动到暂存区
 	   git commit -m "提交描述"					将所有本地暂存区提交到本地仓库
@@ -55,7 +56,8 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git reset HEAD [file]					将file从暂存区移除
 	   git rm \*~								删除当前目录及其子目录中所有~结尾的文件  
 	   git mv [old-file] [new-file]				重命名文件  
-	   git rebase [branch-name]					分支的衍合
+	   git rebase [branch-name]					分支的衍合 
+	
 	   
 	
 ####查看远程仓库状态：

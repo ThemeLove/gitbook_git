@@ -3,7 +3,6 @@
 		git branch [branch-name]							创建分支
 		git checkout [branch-name]							切换分支
 		git checkout -b [branch-name]						创建并切换分支
-		git merge [branch-name]								合并指定分支到当前分支
 		git branch -d [branch-name]							删除指定分支，如果当前分支未合并，会提示
 		git branch -D [branch-name]							强制删除分支，无论是否已被合并
 		git branch -v										查看各个分支最后一次提交信息
