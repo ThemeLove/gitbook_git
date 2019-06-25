@@ -24,7 +24,8 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git log -n 									查看最近n条提交记录
 	   git log -p									查看提交记录并展示每次提交的内容差异
 	   git log --stat								显示提交记录的简要的增改行数统计
-	   git log --pretty=oneline						一行显示提交记录
+	   git log --pretty=oneline						一行显示提交记录 
+	   git reset --hard <commit_id>					回调指定commit_id时的提交，文件内容都会回退
 	
 ####配置相关：
 	    cd ~/.ssh									   		查看是否有ssh key,如果没有，不会有该文件夹
