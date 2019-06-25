@@ -1,9 +1,5 @@
 {
     "title": "git π”√ ÷≤·",
-    "description": "",
-    "isbn": "978-3-16-148410-0",
-    "language": "zh",
-    "direction": "ltr",
 	"plugins":	[
 				"expandable-chapters-small",
 				"prism",
