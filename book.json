@@ -1,7 +1,27 @@
- { 
+{
     "title": "git π”√ ÷≤·",
     "description": "",
     "isbn": "978-3-16-148410-0",
     "language": "zh-tw",
-    "direction": "ltr"
+    "direction": "ltr",
+	"plugins":	[
+				"expandable-chapters-small",
+				"prism",
+				"-highlight"
+				],
+    "pluginsConfig": {
+		"expandable-chapters-small":{},
+		"prism": {
+			"css": [
+				"prismjs/themes/prism-okaidia.css"
+			],
+			"lang": {
+				"flow": "typescript"
+			},
+			"ignore": [
+				"mermaid",
+				"eval-js"
+			]
+		}
+	}
 }
