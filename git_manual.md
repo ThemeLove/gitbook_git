@@ -14,10 +14,10 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 ####查看相关：
 	   git version									查看git版本
 	   git status									查看当前分支的状态
-	   cat [文件名]									打开文件
-	   pwd										可以显示当前目录的路径
+	   cat [文件名]								  打开文件
+	   pwd										    可以显示当前目录的路径
 	   ls -ah										可以查看当前目录下的所有文件，包括隐藏
-	   git diff										比较工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后没有暂存起来的内容  
+	   git diff										比较工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后没有暂存起													来的内容  
 	   git diff --cached							比较已经惨存起来的文件和上次提交时快照之间的差异
 		
 	   git log										显示最近到最远的提交日志
@@ -25,7 +25,6 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git log -p									查看提交记录并展示每次提交的内容差异
 	   git log --stat								显示提交记录的简要的增改行数统计
 	   git log --pretty=oneline						一行显示提交记录 
-	   git reset --hard <commit_id>					回调指定commit_id时的提交，文件内容都会回退
 	
 ####配置相关：
 	    cd ~/.ssh									   		查看是否有ssh key,如果没有，不会有该文件夹
@@ -41,20 +40,21 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 
 ####本地仓库操作：
 	   git init									把当前目录变成可以管理的本地仓库
-	   git init	[project-name]					在当前目录下project-name目录，变成可以管理的本地仓库，如果没有改目录则创建
+	   git init	[project-name]					在当前目录下project-name目录，变成可以管理的本地仓库，如果没有改目录则创建 
 	   git status								查看当前工作目录的状态
-	   git add     [文件名]						添加文件到本地暂存区
-	   git checkout [文件名]						抛弃文件修改的命令，回到上次提交的状态  
+	   git add [文件名]						  添加文件到本地暂存区
+	   git checkout [文件名]				      抛弃文件修改的命令，回到上次提交的状态  
 	   git checkout .							本地所有没有提交的修改都回到原来的状态
 	   git add .								一次性添加所有改动到暂存区
 	   git add -A								一次性添加所有改动到暂存区
-	   git commit -m "提交描述"					将所有本地暂存区提交到本地仓库
-	   git commit -a -m "提交描述"				先add再commit 
-	   git commit --amend -m "提交描述"			追加到上次提交
+	   git commit -m "提交描述"					 将所有本地暂存区提交到本地仓库
+	   git commit -a -m "提交描述"				 先add再commit 
+	   git commit --amend -m "提交描述"			 追加到上次提交
 	   git rm [file]							从工作目录中删除并且从暂存区移除  
 	   git rm --cached [file]    				从暂存区移除但不从工作目录中移除  
 	   git rm -r --cached [file]				对已经进行版本追踪的文件进行移除  
-	   git reset HEAD [file]					将file从暂存区移除
+	   git reset HEAD [file]					将file从暂存区移除  
+	   git reset --hard <commit_id>				回到指定commit_id时的提交，文件内容都会回退
 	   git rm \*~								删除当前目录及其子目录中所有~结尾的文件  
 	   git mv [old-file] [new-file]				重命名文件  
 	   git rebase [branch-name]					分支的衍合 
@@ -73,6 +73,7 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 		例如：git remote add origin git@github.com:ThemeLove/HelloGit.git  
 		git remote show [远程仓库名]							显示远程仓库详细信息	
 		git remote rename [old 远程仓库名] [new 远程仓库名]	重名名远程仓库名
+        git remote set-url origin 远程仓库url					重新设置远程仓库地址
 		git remote rm [远程仓库名]							删除指定远程仓库
 	 
 	    git push -u [远程仓库] [本地仓库分支]				第一次推送所有内容到远程仓库
