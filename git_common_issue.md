@@ -40,3 +40,13 @@ git reflog 恢复已删除分支： [https://blog.csdn.net/changerzhuo_319/artic
 
 相关文章链接：  
 git stash详解：[https://blog.csdn.net/stone_yw/article/details/80795669](https://blog.csdn.net/stone_yw/article/details/80795669 "git stash详解")   
+   
+
+####4. 合并冲突  
+	pull的时候会提示Please enter a commit message to explain why this merge is necesary.......  
+	这是因为本地仓库的修改和远程仓库有冲突，需要解决完冲突之后才提交
+	解决办法：
+	(1).按键盘字母 i 进入insert模式
+	(2).修改最上面那行黄色合并信息,可以不修改
+	(3).按键盘左上角"Esc"
+	(4).输入":wq",注意是冒号+wq,按回车键即可

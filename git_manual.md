@@ -8,7 +8,7 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 本地仓库:local Repository    
 工作区:	worksapce    
 暂存区： git add  时会把文件提交到索引库（建立索引） 和 暂存区   
-堆：git stash:保存当前工作进度，会把暂存区和工作区已经追踪文件的改动保存到堆中**
+堆：git stash 时会把暂存区和工作区已经追踪文件的改动保存到堆中，保存当前工作进度**
   
 ![](/images/git_overview.png)  
 
@@ -17,11 +17,20 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 "廖雪峰git教程")   
 [git详解之一](http://blog.jobbole.com/25775/ "git详解之一")  
 [git详解之二](http://blog.jobbole.com/25808/ "git详解之二")  
-[git详解之三](http://blog.jobbole.com/25877/ "git详解之三")   
-###常用的git命令
-	   git 使用技巧和窍门  
-	   输入git命令的时候可以敲两次Tab键，就会列出所有匹配的可用的命名建议  
-	   比如：输入git co 后按两次Tab键会列出 commit config,根据提示完成命令
+[git详解之三](http://blog.jobbole.com/25877/ "git详解之三")      
+
+
+
+
+##常用的git命令
+
+####git 使用技巧和窍门  
+	1.输入git命令的时候可以敲两次Tab键，就会列出所有匹配的可用的命名建议  
+	  比如：输入git co 后按两次Tab键会列出 commit config,根据提示完成命令   
+	2.查看命令帮助：当你不熟悉git的某个命令时，可以用如下命令进行查看帮助  
+	  git command -help  : 命令行模式下查看   
+	  git command --help : 新开浏览器查看帮助   
+
 ####查看相关：
 	   git version									查看git版本
 	   git status									查看当前分支的状态
@@ -35,7 +44,7 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git log -n 									查看最近n条提交记录
 	   git log -p									查看提交记录并展示每次提交的内容差异
 	   git log --stat								显示提交记录的简要的增改行数统计
-	   git log --pretty=oneline						一行显示提交记录     
+	   git log --pretty=oneline						一行显示提交记录         
 	   git reflog 	 								是显示所有的操作记录，包括提交，回退的操作，  
 													一般用来找出操作记录中的版本号，进行回退
 	
@@ -118,20 +127,6 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 		1.touch .gitignore		创建.gitignore文件，.gitignore文件不能手动创建，只能在命名行下创建  
 		2.gitignore的配置文件：对于已经在追踪的文件，在配置文件中配置忽略，不会起作用，需要将其目录删除重新配置
 		games/**/*.apk			忽略games目录及其子目录下所有apk结尾的文件
-	
-###常见问题：
-	1：pull的时候会提示Please enter a commit message to explain why this merge is necesary.......  
-	这是因为本地仓库的修改和远程仓库有冲突，需要解决完冲突之后才提交
-	解决办法：
-	(1).按键盘字母 i 进入insert模式
-	(2).修改最上面那行黄色合并信息,可以不修改
-	(3).按键盘左上角"Esc"
-	(4).输入":wq",注意是冒号+wq,按回车键即可
-	
-	2.git log --graph --pretty=oneline --abbrev-commit     可以查看分支的合并情况
-	
-	3.准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
-	git merge --no-ff -m "merge with no-ff" dev	
 
 ###git 检出一个项目中的指定目录或文件 [参考博客链接](https://blog.csdn.net/doujiang_zheng/article/details/78635725 "参考博客链接")
 	(1)touch .git/info/sparse-checkout				在.git目录中创建sparse-checkout
