@@ -1,12 +1,23 @@
 ###git	
 SVN是集中式的版本控制工具，集中式版本控制工具是需要联网的；  
-Git是分布式的版本控制工具，分布式版本控制工具是不需要联网的。  
+Git是分布式的版本控制工具，分布式版本控制工具是不需要联网的。    
+
+学习git一定要理解几个重要的概念  
+
+**远程仓库:remote Repository    
+本地仓库:local Repository    
+工作区:	worksapce    
+暂存区： git add  时会把文件提交到索引库（建立索引） 和 暂存区   
+堆：git stash:保存当前工作进度，会把暂存区和工作区已经追踪文件的改动保存到堆中**
+  
+![](/images/git_overview.png)  
+
 
 ###git 相关链接  
 [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 "廖雪峰git教程")   
 [git详解之一](http://blog.jobbole.com/25775/ "git详解之一")  
 [git详解之二](http://blog.jobbole.com/25808/ "git详解之二")  
-[git详解之三](http://blog.jobbole.com/25877/ "git详解之三")
+[git详解之三](http://blog.jobbole.com/25877/ "git详解之三")   
 ###常用的git命令
 	   git 使用技巧和窍门  
 	   输入git命令的时候可以敲两次Tab键，就会列出所有匹配的可用的命名建议  
@@ -24,7 +35,9 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git log -n 									查看最近n条提交记录
 	   git log -p									查看提交记录并展示每次提交的内容差异
 	   git log --stat								显示提交记录的简要的增改行数统计
-	   git log --pretty=oneline						一行显示提交记录 
+	   git log --pretty=oneline						一行显示提交记录     
+	   git reflog 	 								是显示所有的操作记录，包括提交，回退的操作，  
+													一般用来找出操作记录中的版本号，进行回退
 	
 ####配置相关：
 	    cd ~/.ssh									   		查看是否有ssh key,如果没有，不会有该文件夹
@@ -58,7 +71,8 @@ Git是分布式的版本控制工具，分布式版本控制工具是不需要�
 	   git rm \*~								删除当前目录及其子目录中所有~结尾的文件  
 	   git mv [old-file] [new-file]				重命名文件  
 	   git rebase [branch-name]					分支的衍合 
-	
+	   git stash								命令的作用就是将目前还不想提交的但是已经修改的内容进行保存至堆栈中，  
+												后续可以在某个分支上恢复出堆栈中的内容。
 	   
 	
 ####查看远程仓库状态：
