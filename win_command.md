@@ -36,7 +36,7 @@ tasklist | findstr chrome
 netstat -ano | findstr 12306
 ```
 
-##### 9.tskill:杀掉进程
+##### 9.tskill:杀死进程
 
 ```bash
 #杀掉chrome进程
