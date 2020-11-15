@@ -6,3 +6,5 @@
 * [git_常见问题](git_common_issue.md)
 * [git_gitbook常用命令](git_gitbook.md) 
 * [window常用命令](win_command.md)
+* [npm常用命令](npm_command.md)
+
