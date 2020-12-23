@@ -17,7 +17,7 @@
 		git branch -r										查看远程分支
 		git branch -a										查看所有分支：当前分支和远程分支
 
-		用以下2条命令行来删除一个远程分支
+		删除远程仓库分支
 		git push 远程仓库 --delete 远程分支
 	    eg: 删除远程origin仓库的 testbranch分支
 	    git push origin --delete testbranch
